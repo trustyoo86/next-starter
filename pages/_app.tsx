@@ -1,3 +1,5 @@
+import type { AppProps } from 'next/app';
+
 // components
 import Layout from '@/components/Layout';
 
@@ -5,12 +7,7 @@ import Layout from '@/components/Layout';
 import 'antd/dist/antd.css';
 import '../styles/globals.css';
 
-interface IProps<T> {
-  Component: any;
-  pageProps: T;
-}
-
-function MyApp<T>({ Component, pageProps }: IProps<T>) {
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <Layout>
       <Component {...pageProps} />
