@@ -12,13 +12,14 @@ function PageLayout({ children }: IProps) {
   return (
     <Layout>
       <Headers />
-      <Content style={{ padding: '0 50px' }}>
+      <Content style={{ padding: '50px 50px' }}>
         {children}
       </Content>
     </Layout>
   );
 }
 
+PageLayout.content = Content;
 PageLayout.Headers = Headers;
 
 export default PageLayout;
