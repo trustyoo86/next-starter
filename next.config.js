@@ -6,7 +6,8 @@ module.exports = {
   webpack: (config) => {
     config.plugins.resolve = {
       alias: {
-        '_components': resolve(SRC_PATH, 'components'),
+        '@/components': resolve(SRC_PATH, 'components'),
+        '@/containers': resolve(SRC_PATH, 'containers'),
       },
     };
 

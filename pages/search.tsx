@@ -1,7 +1,8 @@
 import { API } from '../app-config';
 import { GetServerSideProps } from 'next';
+
 import SectionHeader from '@/components/SectionHeader';
-import TextForm from '@/components/TextForm';
+import SearchForm from '@/containers/SearchForm';
 
 const { URL, AUTH_KEY } = API;
 
@@ -13,7 +14,7 @@ function Search(props) {
       <SectionHeader
         title='Github repo search'
         subTitle='Github repo를 검색합니다.' />
-      <TextForm />
+      <SearchForm />
     </div>
   );
 }
